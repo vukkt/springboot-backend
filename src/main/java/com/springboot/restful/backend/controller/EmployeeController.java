@@ -22,7 +22,7 @@ public class EmployeeController {
 	
 	//build create employee REST API
 	
-	@PostMapping
+	@PostMapping("/api/employees\")
 	/**
 	 * @RequestBody allows us to retrieve request's body and convert it automatically to java object
 	 * @param employee
