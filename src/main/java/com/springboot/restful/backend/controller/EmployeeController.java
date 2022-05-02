@@ -22,12 +22,7 @@ public class EmployeeController {
 	
 	//build create employee REST API
 	
-	@PostMapping("/api/employees")
-	/**
-	 * @RequestBody allows us to retrieve request's body and convert it automatically to java object
-	 * @param employee
-	 * @return
-	 */
+	@PostMapping()
 	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
 		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
 	}
