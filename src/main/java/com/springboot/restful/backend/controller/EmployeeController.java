@@ -11,7 +11,7 @@ import com.springboot.restful.backend.model.Employee;
 import com.springboot.restful.backend.service.EmployeeService;
 
 @RestController
-@RequestMapping("/api/employees")
+@RequestMapping(value = "/api/employees")
 public class EmployeeController {
 	private EmployeeService employeeService;
 
