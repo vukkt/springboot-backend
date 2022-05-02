@@ -2,7 +2,6 @@ package com.springboot.restful.backend.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,6 +23,11 @@ public class EmployeeController {
 	//build create employee REST API
 	
 	@PostMapping
+	/**
+	 * @RequestBody allows us to retrieve request's body and convert it automatically to java object
+	 * @param employee
+	 * @return
+	 */
 	public ResponseEntity<Employee> saveEmployee(@RequestBody Employee employee){
 		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
 	}
